@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/services.css" />
+    <title>Services</title>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <nav class="bg-white w-full">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-2">
+          <!-- Logo -->
+          <div class="flex-shrink-0 text-2xl font-bold text-gray-800">
+            <img
+              src="./image/Logo Shape Start with a square or rectangular shape to represent stability and structure. Ins 1  (1).png"
+              alt=""
+              class="w-16"
+            />
+          </div>
+
+          <!-- Menu -->
+          <div
+            class="hidden w-full md:flex justify-center items-center space-x-8"
+          >
+            <a
+              href="index.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >Services</a
+            >
+            <a
+              href="work.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >Portfolio</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (hidden by default) -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <a
+          href="index.html"
+          class="block py-2 text-gray-700 hover:text-blue-600"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="block py-2 text-gray-700 hover:text-blue-600"
+          >About</a
+        >
+        <a
+          href="services.html"
+          class="block py-2 text-gray-700 hover:text-blue-600"
+          >Services</a
+        >
+        <a href="work.html" class="block py-2 text-gray-700 hover:text-blue-600"
+          >Portfolio</a
+        >
+        <a
+          href="contact.html"
+          class="block py-2 text-gray-700 hover:text-blue-600"
+          >Contact</a
+        >
+      </div>
+
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      </script>
+    </nav>
+    <!-- hero section -->
+    <section
+      class="flex flex-col items-center justify-center h-screen bg-cover bg-center backdrop-blur-xl bg-no-repeat bg-[url(https://i.pinimg.com/736x/25/c6/f8/25c6f81b28bd6409a8c88bbe31cff3fd.jpg)] m-4 rounded-2xl"
+    >
+      <h1
+        class="md:text-9xl text-3xl font-extrabold text-white px-3 border-2 rounded-2xl backdrop-blur-2xl bg-white/10"
+      >
+        We Build Websites That
+      </h1>
+      <h1
+        class="md:text-9xl text-3xl font-extrabold text-white px-3 md:pb-4 border-2 border-t-0 rounded-b-2xl backdrop-blur-2xl bg-white/10"
+      >
+        Actually Perform
+      </h1>
+      <div class="text-center my-8 text-md text-white">
+        <div class="p-4">
+          <p>
+            From clean personal portfolios to conversion-optimized eCommerce
+            stores,
+          </p>
+
+          <p>
+            we deliver fast, scalable, and beautifully designed websites—crafted
+            to grow your business and brand.
+          </p>
+        </div>
+        <button
+          class="mt-8 px-4 bg-zinc-700 text-white font-bold py-2 rounded-lg hover:bg-zinc-950 hover:-translate-y-1.5 duration-300"
+        >
+          <a href="#services">🚀 Explore Our Services</a>
+        </button>
+      </div>
+    </section>
+    <!-- services section -->
+    <section id="services" class="py-20 m-4">
+      <!-- text area  -->
+      <div
+        class="flex md:flex-row flex-col justify-between items-center md:mx-20 my-10"
+      >
+        <h1 class="md:text-7xl text-6xl my-4 font-bold text-green-600">
+          Our Services
+        </h1>
+
+        <div class="max-w-3xl">
+          <h1 class="text-2xl font-semibold">
+            Crafting Digital Experiences with Precision and Purpose
+          </h1>
+          <p class="py-3 font-medium text-justify">
+            At CodeBramva, we specialize in delivering tailored web development
+            solutions that cater to your unique business needs. Whether you're
+            building your online presence from scratch or looking to scale, we
+            offer a wide range of services to ensure your website performs,
+            engages, and converts.
+          </p>
+        </div>
+      </div>
+      <div class="md:mx-36">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 py-2">
+          <div
+            class="p-4 rounded-2xl bg-zinc-300/80 border-blue-950 border-2 hover:-translate-y-2 hover:shadow-[_0px_0px_20px] duration-300 ease-in-out"
+          >
+            <img
+              src="./image/services/custom.png"
+              alt=""
+              class="w-28 mx-6 my-5 rounded-xl"
+            />
+            <h1 class="text-xl font-bold my-2">
+              🛠️ Custom Website Development
+            </h1>
+            <p>Built from scratch. Designed to perform.</p>
+            <p>
+              We develop high-performance, fully responsive websites tailored to
+              your brand and business goals.
+            </p>
+            <div class="px-4 py-2 font-medium">
+              <p>– Clean code & scalable structure</p>
+              <p>– Mobile-first & fast loading</p>
+              <p>– SEO-friendly setup</p>
+            </div>
+          </div>
+          <div
+            class="p-4 rounded-2xl bg-zinc-300/80 border-blue-950 border-2 hover:-translate-y-2 hover:shadow-[_0px_0px_20px] duration-300 ease-in-out"
+          >
+            <img
+              src="./image/services/e-com.png"
+              alt=""
+              class="w-28 mx-6 my-5 rounded-xl"
+            />
+            <h1 class="text-xl font-bold my-2">
+              💼 E-Com(WooComm) Development
+            </h1>
+            <p>Powerful websites made simple.</p>
+            <p>
+              From blogs to business sites, we build secure, optimized WordPress
+              websites that are easy to manage and maintain.
+            </p>
+            <div class="px-4 py-2 font-medium">
+              <p>– Theme development & customization</p>
+              <p>– Plugin integration</p>
+              <p>– Speed & security optimization</p>
+            </div>
+          </div>
+          <div
+            class="p-4 rounded-2xl bg-zinc-300/80 border-blue-950 border-2 hover:-translate-y-2 hover:shadow-[_0px_0px_20px] duration-300 ease-in-out"
+          >
+            <img
+              src="./image/services/redesign.png"
+              alt=""
+              class="w-28 mx-6 my-5 rounded-xl"
+            />
+            <h1 class="text-xl font-bold my-2">
+              ♻️ Website Redesign and Development
+            </h1>
+            <p>Transform your outdated site into a modern powerhouse.</p>
+            <p>
+              We refresh and rebuild underperforming websites with modern
+              design, better usability, and enhanced performance.
+            </p>
+            <div class="px-4 py-2 font-medium">
+              <p>– Full visual and UX revamp</p>
+              <p>– Speed & mobile optimization</p>
+              <p>– Conversion-driven layout improvements</p>
+            </div>
+          </div>
+          <div
+            class="p-4 rounded-2xl bg-zinc-300/80 border-blue-950 border-2 hover:-translate-y-2 hover:shadow-[_0px_0px_20px] duration-300 ease-in-out"
+          >
+            <img
+              src="./image/services/personal.png"
+              alt=""
+              class="w-28 mx-6 my-5 rounded-xl"
+            />
+            <h1 class="text-xl font-bold my-2">
+              👤 Personal Website Development
+            </h1>
+            <p>Build your brand with a stunning personal site.</p>
+            <p>
+              Whether you're a freelancer, creator, or professional, we craft
+              elegant websites that showcase your story and skills.
+            </p>
+            <div class="px-4 py-2 font-medium">
+              <p>– Portfolio & resume layout</p>
+              <p>– Social & contact integration</p>
+              <p>– Clean design with strong identity</p>
+            </div>
+          </div>
+          <div
+            class="p-4 rounded-2xl bg-zinc-300/80 border-blue-950 border-2 hover:-translate-y-2 hover:shadow-[_0px_0px_20px] duration-300 ease-in-out"
+          >
+            <img
+              src="./image/services/blogging.png"
+              alt=""
+              class="w-28 mx-6 my-5 rounded-xl"
+            />
+            <h1 class="text-xl font-bold my-2">✍️ Blogging Site Development</h1>
+            <p>Designed for writers, optimized for growth.</p>
+            <p>
+              We build fast, easy-to-manage blogging sites using WordPress,
+              focused on both readability and discoverability.
+            </p>
+            <div class="px-4 py-2 font-medium">
+              <p>– Category/tag setup</p>
+              <p>– Custom blog design</p>
+              <p>– SEO-ready with social sharing</p>
+            </div>
+          </div>
+          <div
+            class="p-4 rounded-2xl bg-zinc-300/80 border-blue-950 border-2 hover:-translate-y-2 hover:shadow-[_0px_0px_20px] duration-300 ease-in-out"
+          >
+            <img
+              src="./image/services/uiux.png"
+              alt=""
+              class="w-28 mx-6 my-5 rounded-xl"
+            />
+            <h1 class="text-xl font-bold my-2">🎨 UI/UX Design</h1>
+            <p>Designs that connect, experiences that convert.</p>
+            <p>
+              We design intuitive, beautiful interfaces that create a seamless
+              experience across devices.
+            </p>
+            <div class="px-4 py-2 font-medium">
+              <p>– Clean & modern layout</p>
+              <p>– Interactive elements & micro animations</p>
+              <p>– Brand-aligned visuals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- pricing section -->
+    <section class="py-16 m-4">
+      <!-- textarea  -->
+      <div class="md:mx-24 my-10">
+        <h1 class="text-6xl font-bold md:w-1/2 text-green-600">
+          Pricing Plans
+        </h1>
+        <!-- <p class="text-xl my-2">
+          Custom Web Development Solutions Tailored to Your Needs
+        </p> -->
+      </div>
+      <!-- pricing -->
+      <div class="">
+        <div class="max-w-6xl mx-auto py-4">
+          <div id="slideshow" class="relative">
+            <!-- Slides -->
+            <!-- Slide 1 -->
+
+            <div class="slide hidden">
+              <!-- heading -->
+              <div class="text-3xl font-medium text-center mb-8">
+                Blogging Site Development Pricing
+              </div>
+              <!-- slide content  -->
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-2">
+                <div
+                  class="bg-green-50 border-2 border-green-500 p-8 rounded-xl flex flex-col justify-center"
+                >
+                  <h1 class="text-2xl font-medium my-4 text-center">Basic</h1>
+                  <p class="text-4xl font-extrabold text-center mb-10">
+                    $300 – $500
+                  </p>
+                  <p class="">- WordPress setup</p>
+                  <p class="">- Pre-made theme customization</p>
+                  <p class="">- Up to 5 blog posts added</p>
+                  <p class="">- Contact form setup</p>
+                  <p class="">- Mobile responsiveness</p>
+                  <p class="">- Basic SEO setup</p>
+                  <p class="">- 15 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-green-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+                <div
+                  class="bg-green-300 border-2 border-green-700 p-8 rounded-xl flex flex-col justify-center md:scale-y-110"
+                >
+                  <h1 class="text-2xl font-medium my-4 text-center">
+                    Standard
+                  </h1>
+                  <p class="text-4xl font-extrabold text-center mb-10">
+                    $600 – $900
+                  </p>
+                  <p>- Custom theme design</p>
+                  <p>- SEO-friendly structure</p>
+                  <p>- Category/tags setup</p>
+                  <p>- Newsletter form integration</p>
+                  <p>- 10+ posts formatted</p>
+                  <p>- Social media integration</p>
+                  <p>- 32 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-green-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+                <div
+                  class="bg-green-50 border-2 border-green-500 p-8 rounded-xl flex flex-col justify-center"
+                >
+                  <h1 class="text-2xl font-medium my-4 text-center">Premium</h1>
+                  <p class="text-4xl font-extrabold text-center mb-10">
+                    $1,000 – $1,800
+                  </p>
+                  <p>- Full custom blog system (WordPress/Webflow)</p>
+                  <p>- Ad placements for monetization</p>
+                  <p>- Speed optimization</p>
+                  <p>- CMS training - Blog automation</p>
+                  <p>- Advanced SEO setup</p>
+                  <p>- Social media sharing</p>
+                  <p>- 45 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-green-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- slide 2 -->
+            <div class="slide hidden">
+              <!-- heading  -->
+              <div class="text-3xl font-medium text-center mb-8">
+                Personal Site Development Pricing
+              </div>
+              <!-- pricing content  -->
+              <div class="grid md:grid-cols-3 grid-cols-1 gap-4">
+                <div
+                  class="bg-blue-100 border-2 border-blue-600 p-8 rounded-xl flex flex-col justify-center"
+                >
+                  <h1 class="text-2xl font-medium my-4 text-center">Basic</h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $150 – $300
+                  </h2>
+                  <p>- One-page HTML/CSS layout</p>
+                  <p>- About, contact, social links</p>
+                  <p>- Clean and minimal design</p>
+                  <p>- Mobile responsiveness</p>
+                  <p>- Basic SEO setup</p>
+
+                  <p>- 15 days support</p>
+                  <p>- 1 revision</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-blue-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+                <div
+                  class="bg-blue-300 border-2 border-blue-700 p-8 rounded-xl flex flex-col justify-center md:scale-y-110"
+                >
+                  <h1 class="text-2xl font-medium my-4 text-center">
+                    Standard
+                  </h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $300 – $600
+                  </h2>
+                  <p>Every thing with Basic</p>
+                  <p>- Custom design with animations</p>
+                  <p>- Contact form with backend email setup</p>
+                  <p>- Portfolio or gallery section</p>
+                  <p>- Optimized for speed</p>
+                  <p>- Social media integration</p>
+                  <p>- 30 days support</p>
+                  <p>- 4 revisions</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-blue-800 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+                <div
+                  class="bg-blue-100 border-2 border-blue-600 p-8 rounded-xl flex flex-col justify-center"
+                >
+                  <h1 class="text-2xl font-medium my-4 text-center">Premium</h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $600 – $1,200
+                  </h2>
+                  <p>Every thing with Standard</p>
+                  <p>- WordPress or Webflow-based</p>
+                  <p>- Blog integration (optional)</p>
+                  <p>- Advanced transitions (GSAP)</p>
+                  <p>- Advanced SEO setup</p>
+                  <p>- Editable sections via CMS</p>
+                  <p>- 45 days support</p>
+                  <p>- 7 revisions</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-blue-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- slide 3 -->
+
+            <div class="slide hidden">
+              <!-- heading  -->
+              <div class="text-3xl text-center font-medium mb-8">
+                WooCommerce Site Development Pricing
+              </div>
+              <!-- pricing content  -->
+              <div class="grid md:grid-cols-3 grid-cols-1 gap-4">
+                <div
+                  class="bg-orange-100 border-2 border-orange-600 p-8 rounded-xl flex flex-col justify-center"
+                >
+                  <h1 class="text-2xl font-medium my-4 text-center">Basic</h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $600 – $900
+                  </h2>
+                  <p class="">- WooCommerce install</p>
+                  <p class="">- Up to 5 products added</p>
+                  <p class="">- Payment gateway setup</p>
+                  <p class="">- Default theme customization</p>
+                  <p class="">- Shipping basics</p>
+                  <p class="">- Basic SEO setup</p>
+                  <p class="">- 15 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-orange-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+                <div
+                  class="bg-orange-300 border-2 border-orange-600 p-8 rounded-xl flex flex-col justify-center md:scale-y-110"
+                >
+                  <h1 class="text-2xl font-medium my-4 text-center">
+                    Standard
+                  </h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $900 – $1,500
+                  </h2>
+                  <p class="">Everything in Basic</p>
+                  <p class="">- Custom product layout</p>
+                  <p class="">- Cart/checkout styling</p>
+                  <p class="">- 10–20 products</p>
+                  <p class="">- Coupon & tax configuration</p>
+                  <p class="">- Product filtering</p>
+                  <p class="">- Mobile responsiveness</p>
+                  <p class="">- 30 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-orange-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+                <div
+                  class="bg-orange-100 border-2 border-orange-600 p-8 rounded-xl flex flex-col justify-center"
+                >
+                  <h1 class="text-2xl font-medium my-4 text-center">Premium</h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $1800 - $3299+
+                  </h2>
+                  <p>Every thing in Standard</p>
+                  <p class="">- Advanced store with mega menu</p>
+                  <p class="">- Analytics dashboard</p>
+                  <p class="">- Inventory tools</p>
+                  <p class="">- Speed/security optimization</p>
+                  <p class="">- Email automation</p>
+                  <p class="">- Custom checkout process</p>
+                  <p class="">- 45 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-orange-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- slide 4 -->
+
+            <div class="slide hidden">
+              <!-- heading  -->
+              <div class="text-3xl font-medium text-center mb-8">
+                Website Redesign & Development Pricing
+              </div>
+              <!-- pricing content  -->
+              <div class="grid md:grid-cols-3 grid-cols-1 gap-4">
+                <div
+                  class="bg-pink-200 border-2 border-pink-600 p-8 rounded-xl flex flex-col justify-center"
+                >
+                  <!-- Slide 4 - A -->
+                  <h1 class="text-2xl font-medium my-4 text-center">Basic</h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $300 – $600
+                  </h2>
+                  <p>- UI enhancements (fonts, colors, spacing)</p>
+                  <p>- Minor layout tweaks</p>
+                  <p>- Mobile responsiveness fixes</p>
+                  <p>- CTA improvements</p>
+                  <p>- Basic SEO checkup</p>
+
+                  <p>- 15 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-pink-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+                <div
+                  class="bg-pink-400 border-2 border-pink-600 p-8 rounded-xl flex flex-col justify-center md:scale-y-110"
+                >
+                  <!-- Slide 4 - B -->
+                  <h1 class="text-2xl font-medium my-4 text-center">
+                    Standard
+                  </h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $700 - $1299
+                  </h2>
+                  <p>Everything in Basic</p>
+                  <p>- Page structure revamp</p>
+                  <p>- Updated design assets</p>
+                  <p>- Improved UX flow</p>
+                  <p>- Technical SEO checkup</p>
+                  <p>- Speed optimization</p>
+                  <p>- 30 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-pink-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+                <div
+                  class="bg-pink-100 border-2 border-pink-600 p-8 rounded-xl flex flex-col justify-center"
+                >
+                  <!-- Slide 4 - C -->
+                  <h1 class="text-2xl font-medium my-4 text-center">Premium</h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $1300 - $2500+
+                  </h2>
+                  <p>Everything in Standard</p>
+                  <p>- Full visual and functional redesign</p>
+                  <p>- Animations, interactive UI</p>
+                  <p>- New content layouts</p>
+
+                  <p>- Advanced SEO setup</p>
+                  <p>- Speed optimization</p>
+                  <p>- 45 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-pink-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- slide 5 -->
+
+            <div class="slide hidden">
+              <!-- heading  -->
+              <div class="text-3xl font-medium text-center mb-8">
+                UI/UX Design Pricing
+              </div>
+              <!-- pricing content  -->
+              <div class="grid md:grid-cols-3 grid-cols-1 gap-4">
+                <div
+                  class="bg-purple-100 border-2 border-purple-600 p-8 rounded-xl flex flex-col justify-center"
+                >
+                  <!-- Slide 5 - A -->
+                  <h1 class="text-2xl font-medium my-4 text-center">Basic</h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $200 – $400
+                  </h2>
+                  <p>- 1-page wireframe (home or landing)</p>
+                  <p>- Color & font system</p>
+                  <p>- Up to 2 design concepts</p>
+                  <p>- Simple visual hierarchy</p>
+                  <p>- Basic UI elements</p>
+                  <p>- 15 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-purple-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+                <div
+                  class="bg-purple-300 border-2 border-purple-600 p-8 rounded-xl flex flex-col justify-center md:scale-y-110"
+                >
+                  <!-- Slide 5 - B -->
+                  <h1 class="text-2xl font-medium my-4 text-center">
+                    Standard
+                  </h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $450 – $900
+                  </h2>
+                  <p>Everything in basic</p>
+                  <p>- 3–5 screens UI/UX design</p>
+                  <p>- Components library</p>
+                  <p>- Section-based layout system</p>
+                  <p>- Responsive versions</p>
+                  <p>- Up to 3 design concepts</p>
+                  <p>- 30 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-purple-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+
+                <div
+                  class="bg-purple-100 border-2 border-purple-600 p-8 rounded-xl flex flex-col justify-center"
+                >
+                  <!-- Slide 5 - C -->
+                  <h1 class="text-2xl font-medium my-4 text-center">Premium</h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $999 – $2,000+
+                  </h2>
+                  <p>Everything in Standard</p>
+                  <p>- 6–12 screen prototype</p>
+                  <p>- Desktop & mobile mockups</p>
+                  <p>- UX audit & improvements</p>
+                  <p>- Interactive prototype (Figma or Adobe XD)</p>
+                  <p>- Up to 5 design concepts</p>
+                  <p>- 45 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-purple-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- slide 6 -->
+
+            <div class="slide hidden">
+              <!-- heading  -->
+              <div class="text-3xl font-medium text-center mb-8">
+                Custom Site Development Pricing
+              </div>
+              <!-- pricing content  -->
+              <div class="grid md:grid-cols-3 grid-cols-1 gap-4">
+                <div
+                  class="bg-red-100 border-2 border-red-600 p-8 rounded-xl flex flex-col justify-center"
+                >
+                  <!-- Slide 6 - A -->
+                  <h1 class="text-2xl font-medium my-4 text-center">Basic</h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $500 – $1,000
+                  </h2>
+                  <p>- 3-section site</p>
+                  <p>- Custom HTML/CSS or WordPress</p>
+                  <p>- Contact form</p>
+                  <p>- Fast loading</p>
+                  <p>- Mobile-first build</p>
+                  <p>- Basic SEO setup</p>
+                  <p>- 15 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-red-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+
+                <div
+                  class="bg-red-300 border-2 border-red-700 p-8 rounded-xl flex flex-col justify-center md:scale-y-110"
+                >
+                  <!-- Slide 6 - B -->
+                  <h1 class="text-2xl font-medium my-4 text-center">
+                    Standard
+                  </h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $1,000 – $2,500
+                  </h2>
+                  <p>Every thing in Basic</p>
+                  <p>- 5–10 sections</p>
+                  <p>- Fully responsive layout</p>
+                  <p>- Frontend animations (CSS/JS)</p>
+                  <p>- Admin-editable content (CMS)</p>
+                  <p>- Custom contact or inquiry forms</p>
+
+                  <p>- Speed optimization</p>
+                  <p>- 30 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-red-700 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+                <div
+                  class="bg-red-100 border-2 border-red-600 p-8 rounded-xl flex flex-col justify-center"
+                >
+                  <!-- Slide 6 - C -->
+                  <h1 class="text-2xl font-medium my-4 text-center">Premium</h1>
+                  <h2 class="text-4xl font-extrabold text-center mb-10">
+                    $2,500 – $5,000+
+                  </h2>
+                  <p>Every thing in Standard</p>
+                  <p>- 10+ sections</p>
+                  <p>- React/Next.js SPA or SSR app</p>
+
+                  <p>- API integrations (contact, analytics, CRM)</p>
+
+                  <p>- Backend admin (Node/PHP)</p>
+
+                  <p>- High-end UI and SEO</p>
+                  <p>- Custom animations</p>
+                  <p>- 45 days support</p>
+                  <a
+                    href="contact.html"
+                    class="mt-5 py-1.5 text-center font-medium bg-white border-2 rounded-xl border-red-600 hover:-translate-y-1 duration-300 hover:"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="flex justify-between space-x-6 mt-6">
+            <button
+              onclick="prevSlide()"
+              class="bg-gray-500 text-white px-5 py-2 rounded hover:bg-gray-700 duration-200 hover:-translate-y-1"
+            >
+              Previous
+            </button>
+            <button
+              onclick="nextSlide()"
+              class="bg-gray-500 text-white px-5 py-2 rounded hover:bg-gray-700 duration-200 hover:-translate-y-1"
+            >
+              Next
+            </button>
+          </div>
+
+          <!-- Dot Indicators -->
+          <div class="flex justify-center space-x-2 -mt-6" id="dot-container">
+            <!-- Dots generated by JS -->
+          </div>
+        </div>
+
+        <script>
+          const slides = document.querySelectorAll(".slide");
+          const dotContainer = document.getElementById("dot-container");
+          let current = 0;
+
+          // Generate dot buttons dynamically
+          slides.forEach((_, i) => {
+            const dot = document.createElement("button");
+            dot.className =
+              "w-2 h-2 rounded-full bg-gray-400 hover:bg-gray-600";
+            dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+            dot.addEventListener("click", () => {
+              current = i;
+              showSlide(current);
+            });
+            dotContainer.appendChild(dot);
+          });
+
+          const dots = dotContainer.querySelectorAll("button");
+
+          function showSlide(index) {
+            slides.forEach((slide, i) => {
+              slide.classList.toggle("hidden", i !== index);
+            });
+            dots.forEach((dot, i) => {
+              dot.className =
+                i === index
+                  ? "w-6 h-2 rounded-full bg-gray-700 duration-300"
+                  : "w-2 h-2 rounded-full bg-gray-400 hover:bg-gray-600 ";
+            });
+          }
+
+          function nextSlide() {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+          }
+
+          function prevSlide() {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+          }
+
+          // Initialize
+          showSlide(current);
+        </script>
+      </div>
+    </section>
+    <!-- testimonials section -->
+    <section
+      class="flex flex-col md:flex-row bg-[url(https://i.pinimg.com/736x/3a/c2/0d/3ac20d0336fcf30aa306be4a3567fc54.jpg)] bg-left bg-no-repeat justify-center gap-4 px-10 py-28 md:my-16"
+    >
+      <!-- headline contenal -->
+      <div class="md:w-lg -ml-4">
+        <div
+          class="text-white bg-black/30 backdrop-blur-xl p-6 rounded-2xl border-white border-4"
+        >
+          <h1 class="md:text-5xl text-3xl font-bold">What Our Clients Say</h1>
+          <div class="px-5">
+            <h2 class="font-medium text-lg">Real Results. Real Feedback.</h2>
+            <p class="text-xs">
+              We take pride in the impact our work has on our clients. Here’s
+              what some of them have to say:
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- testimonials container -->
+      <div class="md:w-3/5 grid md:grid-cols-3 grid-cols-1 gap-4">
+        <!-- testimonial 1 -->
+        <div
+          class="p-4 rounded-2xl border-2 hover:shadow-[0px_0px_30px] backdrop-blur-xl bg-white/60 duration-300 flex flex-col hover:-translate-y-4"
+        >
+          <span class="">⭐⭐⭐⭐⭐</span>
+          <div class="p-4">
+            <p class="">
+              "Working with codebramva was one of the best decisions for my
+              business. They delivered a custom website that’s not only
+              beautiful but converts like crazy. Fast, reliable, and
+              professional!"
+            </p>
+            <h2 class="text-xs font-bold">
+              — Arjun Mehta, E-commerce Entrepreneur
+            </h2>
+          </div>
+        </div>
+        <!-- testimonial 2 -->
+        <div
+          class="p-4 rounded-2xl border-2 hover:shadow-[0px_0px_30px] backdrop-blur-xl bg-white/60 duration-300 flex flex-col hover:-translate-y-4"
+        >
+          <span>⭐⭐⭐⭐⭐</span>
+          <div class="p-4">
+            <p class="">
+              "I needed a sleek personal website to showcase my work, and they
+              nailed it. The process was smooth, communication was constant, and
+              the final result exceeded expectations."
+            </p>
+            <h2 class="text-xs font-bold">— Priya R., Freelance Designer</h2>
+          </div>
+        </div>
+        <!-- testimonial 3 -->
+        <div
+          class="p-4 rounded-2xl border-2 hover:shadow-[0px_0px_30px] backdrop-blur-xl bg-white/60 duration-300 flex flex-col hover:-translate-y-4"
+        >
+          <span>⭐⭐⭐⭐⭐</span>
+          <div class="p-4">
+            <p class="">
+              "From design to deployment, the entire experience was seamless.
+              Our WooCommerce store now loads faster and performs better than
+              ever before. Highly recommended!"
+            </p>
+            <h2 class="text-xs font-bold">— Ravi S., Online Store Owner</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- work process section for desk -->
+    <!-- this section displaying the work process of codebramva. -->
+
+    <section
+      class="relative w-7xl h-[300px] mx-auto py-20 my-52 hidden md:flex flex-col justify-center items-center bg-gradient-to-tl from-gray-500 via-white to-gray-500 rounded-2xl border-2"
+    >
+      <h1
+        class="absolute top-0 left-0 -mt-32 text-5xl font-bold text-green-600 drop-shadow-xl"
+      >
+        Step's to create imagination
+      </h1>
+      <div class="w-full flex justify-between px-10">
+        <!-- step 1  -->
+        <div
+          class="h-44 w-64 bg-zinc-50 border-2 rounded-xl flex flex-col justify-center p-2 hover:shadow-2xl hover:scale-105 hover:-translate-y-3.5 duration-200"
+        >
+          <h2 class="font-bold text-lg">1. Requirement Gathering & Analysis</h2>
+          <p class="text-justify text-xs px-5">
+            Understand the client's goals, target audience, and key features.
+            Analyze technical needs and project scope clearly.
+          </p>
+        </div>
+        <!-- step 3 -->
+
+        <div
+          class="h-44 w-64 bg-zinc-50 border-2 rounded-xl flex flex-col justify-center p-2 hover:shadow-2xl hover:scale-105 hover:-translate-y-3.5 duration-200"
+        >
+          <h2 class="font-bold text-lg">3. Development</h2>
+          <p class="text-justify text-xs px-5">
+            Build the website or application using clean, scalable code.
+            Implement features, integrations, and responsive design.
+          </p>
+        </div>
+        <!-- step 5 -->
+
+        <div
+          class="h-44 w-64 bg-zinc-50 border-2 rounded-xl flex flex-col justify-center p-2 hover:shadow-2xl hover:scale-105 hover:-translate-y-3.5 duration-200"
+        >
+          <h2 class="font-bold text-lg">5.Deployment & Delivery</h2>
+          <p class="text-justify text-xs px-5">
+            Launch the final product to the live server, hand over access,
+            provide documentation, and offer post-launch support.
+          </p>
+        </div>
+      </div>
+      <!-- this stap  indecetop  -->
+      <div class="w-full p-6 mx-auto flex justify-center items-center">
+        <span class="w-1/5 h-0.5 bg-black"></span>
+        <span class="relative flex size-3">
+          <span
+            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-black opacity-95"
+          ></span>
+          <span
+            class="relative inline-flex size-3 rounded-full bg-black text-white"
+          ></span>
+        </span>
+        <span class="w-1/5 h-0.5 bg-black"></span>
+        <span class="relative flex size-3">
+          <span
+            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-black opacity-95"
+          ></span>
+          <span
+            class="relative inline-flex size-3 rounded-full bg-black"
+          ></span>
+        </span>
+        <span class="w-1/5 h-0.5 bg-black"></span>
+        <span class="relative flex size-3">
+          <span
+            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-black opacity-95"
+          ></span>
+          <span
+            class="relative inline-flex size-3 rounded-full bg-black"
+          ></span>
+        </span>
+        <span class="w-1/5 h-0.5 bg-black"></span>
+        <span class="relative flex size-3">
+          <span
+            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-black opacity-95"
+          ></span>
+          <span
+            class="relative inline-flex size-3 rounded-full bg-black"
+          ></span>
+        </span>
+        <span class="w-1/5 h-0.5 bg-black"></span>
+        <span class="relative flex size-3">
+          <span
+            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-black opacity-95"
+          ></span>
+          <span
+            class="relative inline-flex size-3 rounded-full bg-black"
+          ></span>
+        </span>
+        <span class="w-1/5 h-0.5 bg-black"></span>
+      </div>
+      <div class="w-full flex justify-around px-32">
+        <!-- step 2  -->
+
+        <div
+          class="h-44 w-64 bg-zinc-50 border-2 rounded-xl flex flex-col justify-center p-2 hover:shadow-2xl hover:scale-105 hover:-translate-y-3.5 duration-200"
+        >
+          <h2 class="font-bold text-lg">2. Design & Prototyping</h2>
+          <p class="text-justify text-xs px-5">
+            Create wireframes, design layouts, and interactive prototypes. Focus
+            on user experience (UX) and branding.
+          </p>
+        </div>
+        <!-- step 4  -->
+
+        <div
+          class="h-44 w-64 bg-zinc-50 border-2 rounded-xl flex flex-col justify-center p-2 hover:shadow-2xl hover:scale-105 hover:-translate-y-3.5 duration-200"
+        >
+          <h2 class="font-bold text-lg">4. Testing & Revisions</h2>
+          <p class="text-justify text-xs px-5">
+            Conduct thorough QA testing for bugs, performance, and
+            responsiveness. Refine based on client feedback.
+          </p>
+        </div>
+      </div>
+      <h3
+        class="absolute bottom-0 right-0 -mb-32 text-5xl font-bold text-green-600 drop-shadow-xl"
+      >
+        We dou't just build site, we build selution
+      </h3>
+    </section>
+    <!-- work process section for mobile -->
+    <h1
+      class="text-3xl font-bold text-green-600 drop-shadow-xl my-8 text-center md:hidden"
+    >
+      Step's to create imagination
+    </h1>
+    <section
+      class="w-32 mx-auto py-10 md:hidden flex flex-col items-center justify-center bg-gradient-to-l from-gray-500 via-white to-gray-500 rounded-2xl border-2"
+    >
+      <!-- step 1  -->
+      <div
+        class="h-44 w-64 bg-zinc-50 border-2 rounded-xl flex flex-col justify-center p-2 hover:shadow-2xl hover:scale-105 hover:-translate-y-3.5 duration-200"
+      >
+        <h2 class="font-bold text-lg">1. Requirement Gathering & Analysis</h2>
+        <p class="text-justify text-xs px-5">
+          Understand the client's goals, target audience, and key features.
+          Analyze technical needs and project scope clearly.
+        </p>
+      </div>
+      <span class="w-0.5 h-20 bg-black"></span>
+      <span class="relative flex size-3">
+        <span
+          class="absolute inline-flex h-full w-full animate-ping rounded-full bg-black opacity-95"
+        ></span>
+        <span
+          class="relative inline-flex size-3 rounded-full bg-black text-white"
+        ></span>
+      </span>
+      <!-- step 2  -->
+
+      <div
+        class="h-44 w-64 bg-zinc-50 border-2 rounded-xl flex flex-col justify-center p-2 hover:shadow-2xl hover:scale-105 hover:-translate-y-3.5 duration-200"
+      >
+        <h2 class="font-bold text-lg">2. Design & Prototyping</h2>
+        <p class="text-justify text-xs px-5">
+          Create wireframes, design layouts, and interactive prototypes. Focus
+          on user experience (UX) and branding.
+        </p>
+      </div>
+      <span class="w-0.5 h-20 bg-black"></span>
+      <span class="relative flex size-3">
+        <span
+          class="absolute inline-flex h-full w-full animate-ping rounded-full bg-black opacity-95"
+        ></span>
+        <span
+          class="relative inline-flex size-3 rounded-full bg-black text-white"
+        ></span>
+      </span>
+      <!-- step 3 -->
+
+      <div
+        class="h-44 w-64 bg-zinc-50 border-2 rounded-xl flex flex-col justify-center p-2 hover:shadow-2xl hover:scale-105 hover:-translate-y-3.5 duration-200"
+      >
+        <h2 class="font-bold text-lg">3. Development</h2>
+        <p class="text-justify text-xs px-5">
+          Build the website or application using clean, scalable code. Implement
+          features, integrations, and responsive design.
+        </p>
+      </div>
+      <span class="w-0.5 h-20 bg-black"></span>
+      <span class="relative flex size-3">
+        <span
+          class="absolute inline-flex h-full w-full animate-ping rounded-full bg-black opacity-95"
+        ></span>
+        <span
+          class="relative inline-flex size-3 rounded-full bg-black text-white"
+        ></span>
+      </span>
+      <!-- step 4  -->
+
+      <div
+        class="h-44 w-64 bg-zinc-50 border-2 rounded-xl flex flex-col justify-center p-2 hover:shadow-2xl hover:scale-105 hover:-translate-y-3.5 duration-200"
+      >
+        <h2 class="font-bold text-lg">4. Testing & Revisions</h2>
+        <p class="text-justify text-xs px-5">
+          Conduct thorough QA testing for bugs, performance, and responsiveness.
+          Refine based on client feedback.
+        </p>
+      </div>
+      <span class="w-0.5 h-20 bg-black"></span>
+      <span class="relative flex size-3">
+        <span
+          class="absolute inline-flex h-full w-full animate-ping rounded-full bg-black opacity-95"
+        ></span>
+        <span
+          class="relative inline-flex size-3 rounded-full bg-black text-white"
+        ></span>
+      </span>
+      <!-- step 5 -->
+
+      <div
+        class="h-44 w-64 bg-zinc-50 border-2 rounded-xl flex flex-col justify-center p-2 hover:shadow-2xl hover:scale-105 hover:-translate-y-3.5 duration-200"
+      >
+        <h2 class="font-bold text-lg">5.Deployment & Delivery</h2>
+        <p class="text-justify text-xs px-5">
+          Launch the final product to the live server, hand over access, provide
+          documentation, and offer post-launch support.
+        </p>
+      </div>
+    </section>
+    <h1
+      class="text-4xl font-bold text-green-600 drop-shadow-xl my-8 text-center md:hidden px-5"
+    >
+      We dou't just build site, we build selution
+    </h1>
+
+    <!-- imaged CTA section -->
+    <div
+      class="p-5 bg-[url(https://i.pinimg.com/736x/c4/f5/ad/c4f5ada006d2fdd12f9ffc94b47d69a3.jpg)] bg-no-repeat bg-cover bg-center md:h-96 m-5 rounded-2xl flex md:flex-row flex-col justify-around items-center gap-10"
+    >
+      <!-- cta text  -->
+      <div
+        class="p-4 max-w-2xl backdrop-blur-2xl bg-black/40 border-4 text-white rounded-3xl"
+      >
+        <h2 class="text-4xl font-bold">Ready to Bring Your Vision to Life?</h2>
+        <p class="px-6 py-4">
+          Let’s create something impactful together. Whether you're starting
+          from scratch or redesigning your digital presence, we’re here to turn
+          ideas into reality with precision and creativity.
+        </p>
+      </div>
+      <!-- contact button  -->
+      <a
+        href="contact.html"
+        class="py-1 px-8 text-2xl text-center text-white font-medium bg-black/40 border-2 rounded-xl hover:-translate-y-1 duration-200 hover:bg-black"
+        >Contact</a
+      >
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-10 pt-12">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10 text-sm px-6">
+        <div>
+          <h4 class="text-xl font-bold mb-2">
+            Code<span class="text-green-500">Bramva</span>
+          </h4>
+          <p class="mb-2">
+            Drive growth, retain customers, and scale up effortlessly with
+            Codebramva.
+          </p>
+          <p>codebramva@gmail.com</p>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-2 text-center">Features</h5>
+          <ul class="space-y-2">
+            <a href="index.html">
+              <li class="hover:bg-[#86ff6881] text-center">Home</li></a
+            >
+            <a href="about.html">
+              <li class="hover:bg-[#86ff6881] text-center">About</li></a
+            >
+            <a href="services.html">
+              <li class="hover:bg-[#86ff6881] text-center">service</li></a
+            >
+            <a href="work.html">
+              <li class="hover:bg-[#86ff6881] text-center">portfolio</li></a
+            >
+            <a href="contact.html">
+              <li class="hover:bg-[#86ff6881] text-center">Contact</li></a
+            >
+          </ul>
+        </div>
+      </div>
+      <div
+        class="py-6 border-t border-gray-700 text-center text-gray-500 text-xs px-6"
+      >
+        <p>© Copyright codeBramva. All rights reserved.</p>
+        <p>
+          Made with ❤️ by
+          <a href="" class="text-green-400 hover:underline"
+            >Soumyadeep, India</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

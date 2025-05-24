@@ -1,0 +1,2150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/work.css" />
+    <title>portfolio</title>
+    <style>
+      .text-navy {
+        color: #000000;
+      }
+      .bg-navy {
+        background-color: #6c8869;
+      }
+      .bg-green {
+        background-color: #10b981;
+      }
+      .text-green {
+        color: #10b981;
+      }
+      .project-card {
+        transition: opacity 0.8s ease-in-out, transform 0.8s;
+      }
+      .hidden-card {
+        display: none;
+      }
+      .fullscreen-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        display: none;
+      }
+      .fullscreen-overlay img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <nav class="bg-white w-full">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-2">
+          <!-- Logo -->
+          <div class="flex-shrink-0 text-2xl font-bold text-gray-800">
+            <img
+              src="./image/Logo Shape Start with a square or rectangular shape to represent stability and structure. Ins 1  (1).png"
+              alt=""
+              class="w-16"
+            />
+          </div>
+
+          <!-- Menu -->
+          <div
+            class="hidden w-full md:flex justify-center items-center space-x-8"
+          >
+            <a
+              href="index.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >Services</a
+            >
+            <a
+              href="work.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >Portfolio</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (hidden by default) -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <a
+          href="index.html"
+          class="block py-2 text-gray-700 hover:text-blue-600"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="block py-2 text-gray-700 hover:text-blue-600"
+          >About</a
+        >
+        <a
+          href="services.html"
+          class="block py-2 text-gray-700 hover:text-blue-600"
+          >Services</a
+        >
+        <a href="work.html" class="block py-2 text-gray-700 hover:text-blue-600"
+          >Portfolio</a
+        >
+        <a
+          href="contact.html"
+          class="block py-2 text-gray-700 hover:text-blue-600"
+          >Contact</a
+        >
+      </div>
+
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      </script>
+    </nav>
+    <!-- hero section -->
+    <section
+      class="flex flex-col justify-center items-center md:h-[700px] relative md:px-16 p-6 py-20 bg-zinc-300 bg-[url(https://i.pinimg.com/736x/4f/87/b4/4f87b444df73dd546d53385aab03be9f.jpg)] bg-no-repeat bg-cover mb-28 m-4 rounded-xl"
+    >
+      <!-- text  -->
+      <div class="w-full flex flex-col">
+        <h1 class="md:text-8xl text-6xl font-bold text-white">Our Portfolio</h1>
+        <h2 class="text-2xl text-white">
+          Excellence in every line of code, purpose in every design.
+        </h2>
+        <div class="mt-28 flex flex-col items-center">
+          <p
+            class="md:w-lg self-end text-white backdrop-blur-xl bg-black/30 border-4 rounded-t-xl p-3"
+          >
+            At <span class="text-2xl font-bold">CodeBramva</span>, our portfolio
+            reflects the standards we uphold—strategic thinking, clean
+            development, and user-first design. Each project featured here
+            represents a tailored solution delivered to meet unique client goals
+            across industries. Whether it’s a dynamic eCommerce store, a modern
+            business site, or a custom personal brand, our work showcases the
+            depth of our expertise and our commitment to quality.
+          </p>
+
+          <p
+            class="text-2xl font-bold p-3 -mt-1 self-end text-white backdrop-blur-xl bg-black/30 border-4 rounded-b-2xl md:rounded-tl-2xl"
+          >
+            Take a closer look at the digital solutions we’ve built—and imagine
+            what we can create for you.
+          </p>
+        </div>
+      </div>
+      <!-- number of project -->
+      <div
+        class="absolute hidden md:flex justify-center items-center gap-16 px-20 py-8 bottom-0 -mb-20 mx-auto rounded-[90px] border-6 border-white bg-white/30 backdrop-blur-2xl"
+      >
+        <div class="text-center">
+          <h1 class="text-7xl font-bold">456+</h1>
+          <p class="text-xs pt-0 mt-0">Number of Hire</p>
+        </div>
+        <div class="text-center">
+          <h1 class="text-7xl font-bold">43+</h1>
+          <p class="text-xs pt-0 mt-0">Number of E-Com</p>
+        </div>
+        <div class="text-center">
+          <h1 class="text-7xl font-bold">129+</h1>
+          <p class="text-xs pt-0 mt-0">Number of personal site</p>
+        </div>
+        <div class="text-center">
+          <h1 class="text-7xl font-bold">189+</h1>
+          <p class="text-xs pt-0 mt-0">Number of blogging site</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter + Sort -->
+    <section
+      class="w-full flex flex-col sm:flex-row sm:items-center justify-between px-6 py-6 border-t border-b border-gray-200 bg-zinc-400 gap-4"
+    >
+      <div class="flex gap-3 flex-wrap" id="filter-buttons">
+        <button
+          class="filter-btn px-4 py-2 rounded-full font-medium transition hover:bg-navy hover:-translate-y-1 hover:text-black"
+          data-category="all"
+        >
+          All
+        </button>
+        <button
+          class="filter-btn px-4 py-2 rounded-full border border-navy text-navy font-medium hover:-translate-y-1 hover:bg-navy hover:text-white transition"
+          data-category="wordpress"
+        >
+          WordPress
+        </button>
+        <button
+          class="filter-btn px-4 py-2 rounded-full border text-navy hover:-translate-y-1 font-medium hover:bg-navy hover:text-white transition"
+          data-category="react"
+        >
+          React
+        </button>
+        <button
+          class="filter-btn px-4 py-2 rounded-full border border-navy text-navy hover:-translate-y-1 font-medium hover:bg-navy hover:text-white transition"
+          data-category="ecommerce"
+        >
+          E-Commerce
+        </button>
+        <button
+          class="filter-btn px-4 py-2 rounded-full border border-navy text-navy hover:-translate-y-1 font-medium hover:bg-navy hover:text-white transition"
+          data-category="personal"
+        >
+          personal
+        </button>
+      </div>
+      <label for="sort-select" class="sm:ml-auto">
+        <select
+          id="sort-select"
+          class="border border-gray-300 px-3 py-2 rounded text-sm w-full sm:w-auto"
+        >
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="popular">Most Popular</option>
+        </select>
+      </label>
+    </section>
+    <section class="md:px-24 px-1">
+      <!-- Projects -->
+      <section
+        id="project-grid"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 py-16"
+      >
+        <!-- React Project -->
+        <div
+          class="project-card bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.03] transition duration-300 overflow-hidden down"
+          data-category="react"
+          data-date="2023-06-01"
+          data-popularity="5"
+        >
+          <img
+            src="/images/project1.jpg"
+            alt="React Dashboard project"
+            class="w-full h-48 object-cover"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-navy">React Dashboard</h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              A short 2–3 line summary describing what this project does and my
+              part in it.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4 text-sm">
+              <span class="bg-gray-200 px-2 py-1 rounded-md">React</span>
+              <span class="bg-gray-200 px-2 py-1 rounded-md">Tailwind</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-3 italic">
+              Role: Full-stack Developer
+            </p>
+            <div class="flex gap-4 mt-4 text-sm">
+              <a
+                href="https://live-demo-placeholder.com/react-dashboard"
+                class="text-green font-medium hover:underline"
+                target="_blank"
+                >Live</a
+              >
+              <a
+                href="https://github.com/your-username/react-dashboard"
+                class="text-navy font-medium hover:underline"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- WordPress Project -->
+        <div
+          class="project-card bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.03] transition duration-300 overflow-hidden down"
+          data-category="wordpress"
+          data-date="2023-03-15"
+          data-popularity="7"
+        >
+          <img
+            src="/images/project2.jpg"
+            alt="WordPress Portfolio website"
+            class="w-full h-48 object-cover"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-navy">
+              WordPress Portfolio
+            </h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              Developed a personal portfolio website using WordPress and a
+              custom theme.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4 text-sm">
+              <span class="bg-gray-200 px-2 py-1 rounded-md">WordPress</span>
+              <span class="bg-gray-200 px-2 py-1 rounded-md">PHP</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-3 italic">
+              Role: Theme Developer
+            </p>
+            <div class="flex gap-4 mt-4 text-sm">
+              <a
+                href="https://live-demo-placeholder.com/wordpress-portfolio"
+                class="text-green font-medium hover:underline"
+                target="_blank"
+                >Live</a
+              >
+              <a
+                href="https://github.com/your-username/wordpress-portfolio"
+                class="text-navy font-medium hover:underline"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="project-card bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.03] transition duration-300 overflow-hidden down"
+          data-category="wordpress"
+          data-date="2023-03-15"
+          data-popularity="7"
+        >
+          <img
+            src="/images/project2.jpg"
+            alt="WordPress Portfolio website"
+            class="w-full h-48 object-cover"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-navy">
+              WordPress Portfolio
+            </h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              Developed a personal portfolio website using WordPress and a
+              custom theme.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4 text-sm">
+              <span class="bg-gray-200 px-2 py-1 rounded-md">WordPress</span>
+              <span class="bg-gray-200 px-2 py-1 rounded-md">PHP</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-3 italic">
+              Role: Theme Developer
+            </p>
+            <div class="flex gap-4 mt-4 text-sm">
+              <a
+                href="https://live-demo-placeholder.com/wordpress-portfolio"
+                class="text-green font-medium hover:underline"
+                target="_blank"
+                >Live</a
+              >
+              <a
+                href="https://github.com/your-username/wordpress-portfolio"
+                class="text-navy font-medium hover:underline"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="project-card bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.03] transition duration-300 overflow-hidden down"
+          data-category="wordpress"
+          data-date="2023-03-15"
+          data-popularity="7"
+        >
+          <img
+            src="/images/project2.jpg"
+            alt="WordPress Portfolio website"
+            class="w-full h-48 object-cover"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-navy">
+              WordPress Portfolio
+            </h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              Developed a personal portfolio website using WordPress and a
+              custom theme.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4 text-sm">
+              <span class="bg-gray-200 px-2 py-1 rounded-md">WordPress</span>
+              <span class="bg-gray-200 px-2 py-1 rounded-md">PHP</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-3 italic">
+              Role: Theme Developer
+            </p>
+            <div class="flex gap-4 mt-4 text-sm">
+              <a
+                href="https://live-demo-placeholder.com/wordpress-portfolio"
+                class="text-green font-medium hover:underline"
+                target="_blank"
+                >Live</a
+              >
+              <a
+                href="https://github.com/your-username/wordpress-portfolio"
+                class="text-navy font-medium hover:underline"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="project-card bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.03] transition duration-300 overflow-hidden down"
+          data-category="wordpress"
+          data-date="2023-03-15"
+          data-popularity="7"
+        >
+          <img
+            src="/images/project2.jpg"
+            alt="WordPress Portfolio website"
+            class="w-full h-48 object-cover"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-navy">
+              WordPress Portfolio
+            </h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              Developed a personal portfolio website using WordPress and a
+              custom theme.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4 text-sm">
+              <span class="bg-gray-200 px-2 py-1 rounded-md">WordPress</span>
+              <span class="bg-gray-200 px-2 py-1 rounded-md">PHP</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-3 italic">
+              Role: Theme Developer
+            </p>
+            <div class="flex gap-4 mt-4 text-sm">
+              <a
+                href="https://live-demo-placeholder.com/wordpress-portfolio"
+                class="text-green font-medium hover:underline"
+                target="_blank"
+                >Live</a
+              >
+              <a
+                href="https://github.com/your-username/wordpress-portfolio"
+                class="text-navy font-medium hover:underline"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- E-Commerce Project -->
+        <div
+          class="project-card bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.03] transition duration-300 overflow-hidden down"
+          data-category="ecommerce"
+          data-date="2024-01-20"
+          data-popularity="9"
+        >
+          <img
+            src="https://i.pinimg.com/736x/cc/48/c6/cc48c6be251e1c3ac206399245673cb9.jpg"
+            alt="E-Commerce store homepage"
+            class="w-full h-48 object-cover"
+            loading="lazy"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold text-navy">E-Commerce Store</h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              Built an online store with product listings, shopping cart, and
+              checkout functionality.
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4 text-sm">
+              <span class="bg-gray-200 px-2 py-1 rounded-md">E-Commerce</span>
+              <span class="bg-gray-200 px-2 py-1 rounded-md">React</span>
+              <span class="bg-gray-200 px-2 py-1 rounded-md">Node.js</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-3 italic">
+              Role: Front-end & Back-end Developer
+            </p>
+            <div class="flex gap-4 mt-4 text-sm">
+              <a
+                href="https://live-demo-placeholder.com/ecommerce-store"
+                class="text-green font-medium hover:underline"
+                target="_blank"
+                >Live</a
+              >
+              <a
+                href="https://github.com/your-username/ecommerce-store"
+                class="text-navy font-medium hover:underline"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- costoum site Slider Section -->
+    <section class="py-6 bg-zinc-100/50 md:px-20 space-y-10">
+      <!-- Slideshow 1 -->
+      <div class="slideshow bg-white p-4 rounded shadow">
+        <div class="slides">
+          <h1 class="text-3xl font-semibold">Costum Site</h1>
+          <div class="slide active">
+            <!-- Slideshow 1 - Slide 1 -->
+            <h1></h1>
+            <div
+              class="w-x flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/07/56/7d/07567de7bf93c69e8a6047a4f88378fc.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"> <h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/aa/7d/08/aa7d0885ea4079888d3ff77c252260fd.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/b6/36/05/b63605e6298dd0f291bf586b6b646596.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/12/6e/79/126e797be7ca76bf32719416d5f0ca8b.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 1 - Slide 2 -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/e1/b5/86/e1b58632852b8702cc15c462756be123.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/7a/2a/0c/7a2a0cb3bad37509ea33c7e00a0defd6.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/2e/82/d5/2e82d5843aeaff0c880b5ded1ca194da.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/39/7b/10/397b10d185265fc9886528c3020fd395.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 1 - Slide 31 -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/84/a3/de/84a3de8e1860051cdbce081dc411d069.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/63/05/d8/6305d823e73184c847fea6c0f6e78a08.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/e9/7c/27/e97c27d4f8629bf6acdb8aa6ca08d23c.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/93/f5/cf/93f5cff0f4a6692151f7094004b07827.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 1 - Slide 32 -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/a5/32/18/a532185ed2ccb716bcdd2431ad4b4c7e.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/9d/8b/5e/9d8b5e4bf5818217731e1b7cce3e29a4.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/32/69/be/3269be7365457670e09e58b009f4cd56.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/06/61/11/0661110ab967555878a848860a32def9.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 1 - Slide 33 -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/b6/36/05/b63605e6298dd0f291bf586b6b646596.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/b6/36/05/b63605e6298dd0f291bf586b6b646596.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/b6/36/05/b63605e6298dd0f291bf586b6b646596.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="md:w-xs md:max-w-xl overflow-hidden rounded-2xl flex flex-col"
+              >
+                <img
+                  src="https://i.pinimg.com/736x/b6/36/05/b63605e6298dd0f291bf586b6b646596.jpg"
+                  alt="work"
+                  class="w-full h-48 max-h-72 z-0 outline-4"
+                  loading="lazy"
+                />
+                <div
+                  class="w-3/4 p-3 -mt-10 z-10 bg-white border-2 rounded-2xl"
+                >
+                  <a href="#"><h1 class="font-medium text-xl">demo.com</h1></a>
+                  <h1 class="px-4 text-xs">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Minus, dolorem.
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="controls flex justify-between mt-4">
+          <button
+            class="prev bg-green-300 hover:bg-green-500 px-4 py-2 rounded hover:md:-translate-y-1.5 duration-200 ease-in"
+          >
+            Prev
+          </button>
+          <div class="indicators flex justify-center space-x-2"></div>
+          <button
+            class="next bg-green-300 hover:bg-green-500 px-4 py-2 rounded hover:md:-translate-y-1.5 duration-200 ease-in"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+      <!-- Persoanl Portfolio site -->
+      <!-- Slideshow 2 -->
+      <div class="slideshow bg-white p-4 rounded shadow">
+        <div class="slides">
+          <h1 class="text-4xl font-semibold">Persoanl Portfolio site</h1>
+          <div class="slide active">
+            <!-- Slideshow 2 - Slide A -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <!-- first contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/8b/f1/80/8bf180a1870e82f4757be095c6f516de.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 2nd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/b5/3c/60/b53c60d0d27d7f0441f045ee97bd26af.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 3rd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/dd/10/19/dd1019d685939d9a8aa14c23d17d8cdf.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 4th contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/76/81/f7/7681f707ebc95ff88eeff9bbb7efa109.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 2 - Slide B -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <!-- first contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/92/24/42/922442d7c373fdf57c95cfdada3493e9.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 2nd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/15/b1/4e/15b14e7079e9372eea25a82b394b91cd.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 3rd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/96/df/55/96df55e855251a7cf7f4e41e48ffb0c2.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 4th contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/2d/ea/a9/2deaa9b9545513a3aeaab75bb1916614.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 2 - Slide C1 -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <!-- first contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/90/96/87/909687ea971a18b2fd7709ba457f8c86.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 2nd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/8d/35/5a/8d355acce5261d97152c4ad5b04cad52.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 3rd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 4th contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/dc/a1/21/dca121d2e22ac206ebfe3f2bed8a6fc4.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 2 - Slide C2 -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <!-- first contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/4f/b7/12/4fb71246b23e8ace1e1fdeb0418976d0.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 2nd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/c3/4d/eb/c34deb0b186e65bb0bdafb30a0876930.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 3rd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/e7/49/ed/e749ed7619047dc62a0a0b923835bcd5.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 4th contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/fc/ba/2e/fcba2e879083727fe04a76315dca53cf.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 2 - Slide C3 -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <!-- first contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/75/c2/54/75c254dac086607d012848bc071dd6a0.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 2nd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/47/33/dc/4733dccfd53e9cdbdf74e886676d8613.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 3rd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/96/c3/6e/96c36e3ebc8a1916fd9593673e475854.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 4th contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/10/13/80/1013805056d6b06553dd047d4e1912fb.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="controls flex justify-between mt-4">
+          <button
+            class="prev bg-green-300 hover:bg-green-500 px-4 py-2 rounded hover:md:-translate-y-1.5 duration-200 ease-in"
+          >
+            Prev
+          </button>
+          <div class="indicators flex justify-center space-x-2"></div>
+          <button
+            class="next bg-green-300 hover:bg-green-500 px-4 py-2 rounded hover:md:-translate-y-1.5 duration-200 ease-in"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+      <!-- blogging site slideshow -->
+      <!-- Slideshow 3 -->
+      <div class="slideshow bg-white p-4 rounded shadow">
+        <div class="slides">
+          <h1 class="text-4xl font-semibold">Blogging site</h1>
+          <div class="slide active">
+            <!-- Slideshow 3 - Slide X -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <!-- first contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 2nd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 3rd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 4th contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 3 - Slide Y -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <!-- first contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 2nd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 3rd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 4th contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 3 - Slide Z -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <!-- first contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 2nd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 3rd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 4th contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 3 - Slide Z1 -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <!-- first contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 2nd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 3rd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 4th contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 3 - Slide Z2 -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <!-- first contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 2nd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 3rd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 4th contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <!-- Slideshow 3 - Slide Z3 -->
+            <div
+              class="flex flex-col md:flex-row justify-center items-center gap-4 px-10 py-10"
+            >
+              <!-- first contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 2nd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 3rd contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+              <!-- 4th contener -->
+              <div class="w-xs">
+                <!-- site img -->
+                <div class="overflow-hidden h-52 rounded-2xl">
+                  <img
+                    src="https://i.pinimg.com/736x/3e/7d/fe/3e7dfebc5a9b15a117e701fae26fa586.jpg"
+                    alt="prev work"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <!-- link -->
+                <div class="">
+                  <a href=""><h1 class="font-medium text-xl">demo.com</h1></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="controls flex justify-between mt-4">
+          <button
+            class="prev bg-green-300 hover:bg-green-500 px-4 py-2 rounded hover:md:-translate-y-1.5 duration-200 ease-in"
+          >
+            Prev
+          </button>
+          <div class="indicators flex justify-center space-x-2"></div>
+          <button
+            class="next bg-green-300 hover:bg-green-500 px-4 py-2 rounded hover:md:-translate-y-1.5 duration-200 ease-in"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <script>
+        document
+          .querySelectorAll(".slideshow")
+          .forEach((slideshow, slideshowIndex) => {
+            const slides = slideshow.querySelectorAll(".slide");
+            const indicators = slideshow.querySelector(".indicators");
+            const nextBtn = slideshow.querySelector(".next");
+            const prevBtn = slideshow.querySelector(".prev");
+            let current = 0;
+
+            // Generate indicators
+            slides.forEach((_, i) => {
+              const dot = document.createElement("span");
+              dot.className =
+                "w-3 h-3 bg-gray-400 rounded-full cursor-pointer transition-all inline-block";
+              dot.addEventListener("click", () => goToSlide(i));
+              indicators.appendChild(dot);
+            });
+
+            function updateIndicators() {
+              Array.from(indicators.children).forEach((dot, i) => {
+                dot.classList.toggle("bg-green-400", i === current);
+                dot.classList.toggle("w-8", i === current);
+                dot.classList.toggle("bg-gray-400", i !== current);
+              });
+            }
+
+            function showSlide(index) {
+              slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === index);
+              });
+              updateIndicators();
+            }
+
+            function goToSlide(index) {
+              current = index;
+              showSlide(current);
+            }
+
+            function nextSlide() {
+              current = (current + 1) % slides.length;
+              showSlide(current);
+            }
+
+            function prevSlide() {
+              current = (current - 1 + slides.length) % slides.length;
+              showSlide(current);
+            }
+
+            // Attach button listeners
+            nextBtn.addEventListener("click", nextSlide);
+            prevBtn.addEventListener("click", prevSlide);
+
+            // Optional: Only enable keyboard navigation for the first slideshow
+            if (slideshowIndex === 0) {
+              document.addEventListener("keydown", (e) => {
+                if (e.key === "ArrowRight") nextSlide();
+                if (e.key === "ArrowLeft") prevSlide();
+              });
+            }
+
+            // Initialize
+            showSlide(current);
+          });
+      </script>
+    </section>
+    <!-- site design -->
+
+    <section class="p-10 md:max-w-screen mx-auto">
+      <h1 class="md:text-5xl text-4xl font-bold md:my-8 md:px-10 my-4">
+        UI/UX Design
+      </h1>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 md:px-16"
+      >
+        <div
+          class="overflow-hidden rounded-2xl shadow-md h-52 hover:scale-105 transition-transform duration-300 zoom-in"
+        >
+          <!-- site design 1 -->
+          <img
+            src="https://i.pinimg.com/736x/58/71/8c/58718cb6b32d6aec8167498c644b34aa.jpg"
+            alt="Gallery Image 1"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+        <div
+          class="overflow-hidden rounded-2xl md:col-span-3 shadow-md h-52 hover:scale-105 transition-transform duration-300 zoom-in"
+        >
+          <!-- site design 2 -->
+          <img
+            src="https://i.pinimg.com/736x/c2/da/2e/c2da2e03e5668e7bac7d114e9be5fe06.jpg"
+            alt="Gallery Image 2"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+        <div
+          class="overflow-hidden rounded-2xl shadow-md h-52 hover:scale-105 transition-transform duration-300 zoom-in"
+        >
+          <!-- site design 3 -->
+          <img
+            src="https://i.pinimg.com/736x/1f/1e/34/1f1e3467484661808a192f1ebba309b2.jpg"
+            alt="Gallery Image 3"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+        <div
+          class="overflow-hidden rounded-2xl md:col-span-2 shadow-md h-52 hover:scale-105 transition-transform duration-300 zoom-in"
+        >
+          <!-- site design 4 -->
+          <img
+            src="https://i.pinimg.com/736x/12/fb/52/12fb52bfed307710a23607b92359a39e.jpg"
+            alt="Gallery Image 4"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+        <div
+          class="overflow-hidden rounded-2xl shadow-md h-52 hover:scale-105 transition-transform duration-300 zoom-in"
+        >
+          <!-- site design 5 -->
+          <img
+            src="https://i.pinimg.com/736x/13/a1/14/13a114a5db8952a023c368da42beaf0c.jpg"
+            alt="Gallery Image 5"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+        <div
+          class="overflow-hidden rounded-2xl md:col-span-2 shadow-md h-52 hover:scale-105 transition-transform duration-300 zoom-in"
+        >
+          <!-- site design 6 -->
+          <img
+            src="https://i.pinimg.com/736x/9b/bb/44/9bbb44deef2d501aa5cbc4a5f2833c4d.jpg"
+            alt="Gallery Image 6"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+        <div
+          class="overflow-hidden rounded-2xl shadow-md h-52 hover:scale-105 transition-transform duration-300 zoom-in"
+        >
+          <!-- site design 7 -->
+          <img
+            src="https://i.pinimg.com/736x/84/8b/49/848b49803feab529f0493983569d9204.jpg"
+            alt="Gallery Image 7"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+        <div
+          class="overflow-hidden md:col-span-3 rounded-2xl h-52 shadow-md hover:scale-105 transition-transform duration-300 zoom-in"
+        >
+          <!-- site design 8 -->
+          <img
+            src="https://i.pinimg.com/736x/9c/02/ed/9c02edf49f8998759a3b5432a299181f.jpg"
+            alt="Gallery Image 8"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+        <div
+          class="overflow-hidden rounded-2xl shadow-md h-52 hover:scale-105 transition-transform duration-300 zoom-in"
+        >
+          <!-- site design 9 -->
+          <img
+            src="https://i.pinimg.com/736x/13/b3/ab/13b3ab17b950523aa4054653f0e364b2.jpg"
+            alt="Gallery Image 9"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+        <div
+          class="overflow-hidden md:col-span-2 rounded-2xl shadow-md h-52 hover:scale-105 transition-transform duration-300 zoom-in"
+        >
+          <!-- site design 10 -->
+          <img
+            src="https://i.pinimg.com/736x/47/2d/49/472d4947b2aeabb7bf18742ca2f2b79d.jpg"
+            alt="Gallery Image 10"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+        <div
+          class="overflow-hidden rounded-2xl shadow-md h-52 hover:scale-105 transition-transform duration-300 zoom-in"
+        >
+          <!-- site design 11 -->
+          <img
+            src="https://i.pinimg.com/736x/a4/31/31/a43131e82a0716e043b5d6691f8670d8.jpg"
+            alt="Gallery Image 11"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+        <div
+          class="overflow-hidden md:col-span-2 rounded-2xl shadow-md h-52 hover:scale-105 transition-transform duration-300 zoom-in"
+        >
+          <!-- site design 12 -->
+          <img
+            src="https://i.pinimg.com/736x/99/f1/4a/99f14ad0cb1e3a9143ec23beb091838a.jpg"
+            alt="Gallery Image 12"
+            class="w-full h-full object-cover cursor-pointer"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Fullscreen Overlay -->
+    <div
+      id="fullscreenOverlay"
+      class="fullscreen-overlay"
+      onclick="this.style.display='none'"
+    >
+      <img id="fullscreenImage" src="" alt="full screen" />
+    </div>
+
+    <script>
+      const images = document.querySelectorAll("img");
+      const overlay = document.getElementById("fullscreenOverlay");
+      const fullscreenImg = document.getElementById("fullscreenImage");
+
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          fullscreenImg.src = img.src;
+          overlay.style.display = "flex";
+        });
+      });
+    </script>
+    <!-- CTA -->
+    <section
+      class="text-center py-28 bg-[#0f72114d] bg-[url(https://i.pinimg.com/736x/47/79/f2/4779f200d02304a65221cb55d66780e9.jpg)] bg-no-repeat bg-cover bg-center text-white mx-6 rounded-2xl shadow-lg flex flex-col items-center justify-center p-10"
+    >
+      <div
+        class="backdrop-blur-xs bg-black/40 md:p-10 p-5 rounded-2xl shadow-2xl border-4"
+      >
+        <h2 class="md:text-4xl text-2xl font-bold">
+          Want to build something together?
+        </h2>
+        <p class="mt-3 text-lg">
+          Let’s discuss how we can bring your vision to life.
+        </p>
+        <!-- Contact -->
+        <a
+          href="contact.html"
+          class="inline-block mt-6 px-8 py-3 bg-white text-green font-semibold text-lg rounded-2xl hover:bg-navy hover:text-white transition duration-300 hover:-translate-y-1.5"
+        >
+          Let's Talk
+        </a>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-10 pt-12">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10 text-sm px-6">
+        <div>
+          <h4 class="text-xl font-bold mb-2">
+            Code<span class="text-green-500">Bramva</span>
+          </h4>
+          <p class="mb-2">
+            Drive growth, retain customers, and scale up effortlessly with
+            Codebramva.
+          </p>
+          <p>codebramva@gmail.com</p>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-2 text-center">Features</h5>
+          <ul class="space-y-2">
+            <a href="index.html">
+              <li class="hover:bg-[#86ff6881] text-center">Home</li></a
+            >
+            <a href="about.html">
+              <li class="hover:bg-[#86ff6881] text-center">About</li></a
+            >
+            <a href="services.html">
+              <li class="hover:bg-[#86ff6881] text-center">service</li></a
+            >
+            <a href="work.html">
+              <li class="hover:bg-[#86ff6881] text-center">portfolio</li></a
+            >
+            <a href="contact.html">
+              <li class="hover:bg-[#86ff6881] text-center">Contact</li></a
+            >
+          </ul>
+        </div>
+      </div>
+      <div
+        class="py-6 border-t border-gray-700 text-center text-gray-500 text-xs px-6"
+      >
+        <p>© Copyright codeBramva. All rights reserved.</p>
+        <p>
+          Made with ❤️ by
+          <a href="" class="text-green-400 hover:underline"
+            >Soumyadeep, India</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- JS -->
+
+    <!-- <script>
+      const animatedElements2 = document.querySelectorAll(
+        ".animated-text,.zoom-in,.down"
+      );
+
+      const observer2 = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              observer.unobserve(entry.target); // Run only once per element
+            }
+          });
+        },
+        {
+          threshold: 0.3, // Correctly placed and spelled
+        }
+      );
+
+      animatedElements2.forEach((el) => observer2.observe(el));
+    </script> -->
+
+    <script>
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const sortSelect = document.getElementById("sort-select");
+      const grid = document.getElementById("project-grid");
+      let activeCategory = "all";
+
+      function updateDisplay() {
+        let cards = Array.from(grid.children);
+
+        // Filter
+        cards.forEach((card) => {
+          const match =
+            activeCategory === "all" ||
+            card.dataset.category === activeCategory;
+          card.style.display = match ? "block" : "none";
+          if (match) {
+            card.classList.add("opacity-0");
+            setTimeout(() => card.classList.remove("opacity-0"), 10);
+          }
+        });
+
+        // Sort
+        const sortBy = sortSelect.value;
+        cards = cards.sort((a, b) => {
+          if (sortBy === "newest") {
+            return new Date(b.dataset.date) - new Date(a.dataset.date);
+          } else if (sortBy === "oldest") {
+            return new Date(a.dataset.date) - new Date(b.dataset.date);
+          } else if (sortBy === "popular") {
+            return (
+              parseInt(b.dataset.popularity) - parseInt(a.dataset.popularity)
+            );
+          }
+        });
+
+        // Re-append
+        grid.innerHTML = "";
+        cards.forEach((card) => grid.appendChild(card));
+      }
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          activeCategory = btn.dataset.category;
+          filterButtons.forEach((b) =>
+            b.classList.remove("bg-navy", "text-white")
+          );
+          btn.classList.add("bg-navy", "text-white");
+          updateDisplay();
+        });
+      });
+
+      sortSelect.addEventListener("change", updateDisplay);
+
+      updateDisplay(); // Initial call
+    </script>
+  </body>
+</html>

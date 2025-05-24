@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <title>contact</title>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <nav class="bg-white w-full">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-2">
+          <!-- Logo -->
+          <div class="flex-shrink-0 text-2xl font-bold text-gray-800">
+            <img
+              src="./image/Logo Shape Start with a square or rectangular shape to represent stability and structure. Ins 1  (1).png"
+              alt=""
+              class="w-16"
+            />
+          </div>
+
+          <!-- Menu -->
+          <div
+            class="hidden w-full md:flex justify-center items-center space-x-8"
+          >
+            <a
+              href="index.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >Services</a
+            >
+            <a
+              href="work.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >Portfolio</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-900 hover:text-white hover:bg-blue-950 rounded-2xl duration-300 ease-in px-3"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (hidden by default) -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <a
+          href="index.html"
+          class="block py-2 text-gray-700 hover:text-green-600"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="block py-2 text-gray-700 hover:text-green-600"
+          >About</a
+        >
+        <a
+          href="services.html"
+          class="block py-2 text-gray-700 hover:text-green-600"
+          >Services</a
+        >
+        <a
+          href="work.html"
+          class="block py-2 text-gray-700 hover:text-green-600"
+          >Portfolio</a
+        >
+        <a
+          href="contact.html"
+          class="block py-2 text-gray-700 hover:text-green-600"
+          >Contact</a
+        >
+      </div>
+
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      </script>
+    </nav>
+    <!-- hero section  -->
+    <section
+      class="bg-gray-100 bg-[url(https://i.pinimg.com/736x/78/a5/8e/78a58e813f777b8466c6baf23c418dd2.jpg)] bg-no-repeat bg-cover bg-center py-20 text-center relative h-[650px] flex flex-col justify-center items-center m-5 p-10 rounded-2xl overflow-hidden"
+    >
+      <div
+        class="max-w-3xl mx-auto md:px-6 px-4 py-4 backdrop-blur-lg bg-black/30 rounded-lg outline-double outline-4 outline-white"
+      >
+        <h1 class="md:text-5xl text-xl font-bold mb-4 text-white">
+          Let’s Build Something Great
+        </h1>
+        <p class="md:text-lg text-xs text-gray-50 mb-6">
+          Have a project or idea? We’d love to hear from you. Fill out the form
+          below and our team will get in touch shortly.
+        </p>
+      </div>
+      <blockquote
+        class="text-xl italic bottom-0 right-0 absolute p-4 px-10 bg-white md:rounded-tl-2xl outline-white outline-4 font-bold outline-offset-4"
+      >
+        “Your vision, our mission — let's bring your ideas to life.”
+      </blockquote>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section
+      class="py-20 bg-[url(https://i.pinimg.com/736x/0a/3f/31/0a3f31f8fcc5b754e7ca855673697650.jpg)] bg-no-repeat bg-left m-2 mb-0 rounded-2xl my-20"
+    >
+      <div class="max-w-2xl mx-auto px-6 py-8">
+        <form
+          id="contact-form"
+          action="#"
+          method="POST"
+          class="space-y-6 bg-black/50 backdrop-blur-lg p-8 rounded-2xl text-white border-8"
+        >
+          <h1 class="text-4xl font-bold text-white">Contact Us</h1>
+          <!-- Success Message -->
+          <div
+            id="form-success"
+            class="hidden mb-6 text-green-50 font-semibold text-center"
+          >
+            Your message has been successfully sent!
+          </div>
+
+          <!-- Name and Country Side by Side -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Name -->
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-50"
+                >Your Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+                class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+            </div>
+
+            <!-- Country -->
+            <div>
+              <label
+                for="country"
+                class="block text-sm font-medium text-gray-50"
+                >Country</label
+              >
+              <input
+                type="text"
+                id="country"
+                name="country"
+                placeholder="Country"
+                required
+                class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-50"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="........@gmail.com"
+              required
+              class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+
+          <!-- Type of Website -->
+          <div>
+            <label for="type" class="block text-sm font-medium text-gray-50"
+              >Type of Website</label
+            >
+            <select
+              id="type"
+              name="type"
+              required
+              class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+            >
+              <option value="" class="text-black">Select one</option>
+              <option class="text-black">Personal Portfolio</option>
+              <option class="text-black">Business Website</option>
+              <option class="text-black">eCommerce Store</option>
+              <option class="text-black">Blog / Content Site</option>
+              <option class="text-black">Website Redesign</option>
+              <option class="text-black">UI/UX Design</option>
+            </select>
+          </div>
+
+          <!-- Budget -->
+          <div>
+            <label for="budget" class="block text-sm font-medium text-gray-50"
+              >Estimated Budget</label
+            >
+            <select
+              id="budget"
+              name="budget"
+              required
+              class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+            >
+              <option value="" class="text-black">Select your budget</option>
+              <option class="text-black">Below $500</option>
+              <option class="text-black">$500 - $1000</option>
+              <option class="text-black">$1000 - $2500</option>
+              <option class="text-black">$2500 - $5000</option>
+              <option class="text-black">Above $5000</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-50"
+              >Your Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="mt-1 block w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+              placeholder="Tell us more about your project..."
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div>
+            <button
+              type="submit"
+              class="w-full bg-green-600 text-white text-lg py-3 px-6 rounded-md hover:bg-green-700 hover:-translate-y-1.5 transition"
+            >
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Script for Form Submission Handling -->
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          this.reset();
+          const successMessage = document.getElementById("form-success");
+          successMessage.classList.remove("hidden");
+          this.scrollIntoView({ behavior: "smooth" });
+          setTimeout(() => {
+            successMessage.classList.add("hidden");
+          }, 8000);
+        });
+    </script>
+    <!-- contact  -->
+    <section class="grid md:grid-cols-4 grid-cols-1 md:px-20 gap-4 py-8 pb-20">
+      <!-- email  -->
+      <div
+        class="h-40 p-4 bg-blue-950/90 border-0 text-white rounded-xl flex flex-col justify-center m-4"
+      >
+        <h1 class="text-xl font-bold">Email</h1>
+        <h1 class="px-2">codebramva@gmail.com</h1>
+      </div>
+      <!-- address  -->
+      <div
+        class="h-40 p-4 bg-blue-950/80 border-0 text-white rounded-xl flex flex-col justify-center m-4"
+      >
+        <h1 class="text-xl font-bold">Address</h1>
+        <h1 class="px-2">
+          GVFX+VQC, Bakshirhat Road, Santra Para, Kajiberia, Mankur, West Bengal
+          711303
+        </h1>
+      </div>
+      <!-- gps  -->
+      <div
+        class="h-40 p-4 bg-blue-950/70 border-0 text-white rounded-xl flex flex-col justify-center m-4"
+      >
+        <h1 class="text-xl font-bold">GPS</h1>
+        <h1 class="px-2">kajibireya, daulgram, bagnan, howrah, india 711303</h1>
+      </div>
+      <!-- Socall media -->
+      <div
+        class="h-40 p-4 bg-blue-950/50 border-0 text-white rounded-xl flex flex-col justify-center m-4"
+      >
+        <h1 class="text-xl font-bold">Socall media</h1>
+        <div class="flex gap-4 py-4">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img
+              src="https://i.pinimg.com/736x/5b/b0/f7/5bb0f73a7b3e0f976acad614a42e5040.jpg"
+              alt="Facebook"
+              class="w-10 hover:scale-110 duration-200 rounded-3xl"
+            />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img
+              src="https://i.pinimg.com/736x/ff/72/6f/ff726f3da7a957988d2bb109e59f2d8a.jpg"
+              alt="Instagram"
+              class="w-10 hover:scale-110 duration-200 rounded-xl"
+            />
+          </a>
+          <a href="https://www.twitter.com/" target="_blank">
+            <img
+              src="https://i.pinimg.com/736x/da/9c/c1/da9cc1f2e152683ddba2240817404977.jpg"
+              alt="Twitter"
+              class="w-10 hover:scale-110 duration-200 rounded-xl"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9787.160155519528!2d87.90318535524916!3d22.52878096602431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a029f512406d22b%3A0xb0c66ab57de19903!2sZero%20point!5e0!3m2!1sen!2sin!4v1747404232486!5m2!1sen!2sin"
+      class="md:w-7xl mx-auto h-96 rounded-2xl"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-10 pt-12">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10 text-sm px-6">
+        <div>
+          <h4 class="text-xl font-bold mb-2">
+            Code<span class="text-green-500">Bramva</span>
+          </h4>
+          <p class="mb-2">
+            Drive growth, retain customers, and scale up effortlessly with
+            Codebramva.
+          </p>
+          <p>codebramva@gmail.com</p>
+        </div>
+        <div>
+          <h5 class="font-semibold mb-2 text-center">Features</h5>
+          <ul class="space-y-2">
+            <a href="index.html">
+              <li class="hover:bg-[#86ff6881] text-center">Home</li></a
+            >
+            <a href="about.html">
+              <li class="hover:bg-[#86ff6881] text-center">About</li></a
+            >
+            <a href="services.html">
+              <li class="hover:bg-[#86ff6881] text-center">service</li></a
+            >
+            <a href="work.html">
+              <li class="hover:bg-[#86ff6881] text-center">portfolio</li></a
+            >
+            <a href="contact.html">
+              <li class="hover:bg-[#86ff6881] text-center">Contact</li></a
+            >
+          </ul>
+        </div>
+      </div>
+      <div
+        class="py-6 border-t border-gray-700 text-center text-gray-500 text-xs px-6"
+      >
+        <p>© Copyright codeBramva. All rights reserved.</p>
+        <p>
+          Made with ❤️ by
+          <a href="" class="text-green-400 hover:underline"
+            >Soumyadeep, India</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
